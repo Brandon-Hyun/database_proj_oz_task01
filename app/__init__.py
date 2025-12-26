@@ -7,7 +7,7 @@ from .config import Config
 engine = create_engine(
     Config.SQLALCHEMY_DATABASE_URI,
     echo=True,
-    connect_args={"check_same_thread": False}
+    connect_args=Config.CONNECT_ARGS
 )
 
 # TODO: 세션(SessionLocal) 객체를 만드세요 (scoped_session)
